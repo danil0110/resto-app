@@ -7,7 +7,7 @@ import {Route, Switch} from 'react-router-dom';
 import Background from './food-bg.jpg';
 
 const App = ({RestoService}) => {
-    console.log(RestoService.getMenuItems());
+    console.log(RestoService.getMenuItems().then(data => console.log(data)));
     return (
         <div style={{background: `url(${Background}) center center/cover no-repeat`}} className="app">
             <AppHeader total={50}/>
