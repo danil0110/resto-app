@@ -12,11 +12,11 @@ const App = () => {
             <AppHeader total={50}/>
             <Switch>
                 <Route exact path='/' component={MainPage} />
+                <Route exact path='/cart' component={CartPage} />
                 <Route exact path='/:id' render={({match}) => {
                     const {id} = match.params;
                     return <MenuItemPage id={id} />
                 }} />
-                <Route exact path='/cart' component={CartPage} />
                 <Route exact component={MainPage} />
             </Switch>
         </div>
